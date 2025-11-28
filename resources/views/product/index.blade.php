@@ -8,18 +8,19 @@
         </div>
     </header>
 
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+
     <main class="container my-4">
         <div class="row g-4">
 
             @foreach ($products as $product)
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card shadow-sm product-card h-100 p-3">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">{{ $product->name }}</h5>
-                            <p class="card-text text-primary">{{ $product->description }}</p>
-                            <p class="price fw-bold text-primary">{{ $product->price }} €</p>
-                        </div>
-                    </div>
+                    <x-card :product=$product />
                 </div>
             @endforeach
 

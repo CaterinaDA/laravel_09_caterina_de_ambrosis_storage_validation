@@ -10,6 +10,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="{{ route('homepage') }}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('product.index') }}">Prodotti</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('product.create') }}">Aggiungi Prodotto</a></li>
             </ul>
         </div>
     </div>
